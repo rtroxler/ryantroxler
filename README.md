@@ -14,6 +14,12 @@ To start a web server for the application, run:
 
     lein ring server
 
+## Rosetta Code TODO
+
+[Josephus problem][1]
+
+[1]: http://rosettacode.org/wiki/Josephus_problem
+
 ## License
 
 Copyright © 2013 FIXME
