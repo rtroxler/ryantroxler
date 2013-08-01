@@ -10,6 +10,12 @@
 (defn about-page []
   (layout/render "about.html"))
 
+(defn todo-page [] 
+  (layout/render "todo.html"
+                 {:content (util/md->html "/md/todo.md")}))
+
 (defroutes home-routes
   (GET "/" [] (home-page))
-  (GET "/about" [] (about-page)))
+  (GET "/about" [] (about-page))
+  (GET "/todo" [] (todo-page)))
+
