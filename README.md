@@ -1,6 +1,6 @@
 # ryantroxler
 
-FIXME
+Personal website written in Clojure using the Luminus template.
 
 ## Prerequisites
 
@@ -10,16 +10,10 @@ You will need [Leiningen][1] 2.0 or above installed.
 
 ## Running
 
-To start a web server for the application, run:
+To start a web server for development, run:
 
-    lein ring server
-
-## Rosetta Code TODO
-
-[Josephus problem][1]
-
-[1]: http://rosettacode.org/wiki/Josephus_problem
+    lein ring server-headless 8000
 
 ## License
 
-Copyright © 2013 FIXME
+Copyright © 2013 
