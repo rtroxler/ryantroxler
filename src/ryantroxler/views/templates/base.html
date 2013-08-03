@@ -17,6 +17,14 @@
                 <div class="navbar-inner">
                     <div class="container-fluid">
                         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="/">ryantroxler</a> 						
+                        <a href="/about">About</a>
+                        <a href="/blog">Blog</a>
+                        <a href="/todo">TODO</a>
+                        <a class="btn dropdown-toggle" data-toggle"dropdown" href="#">Projects</a>
+                           <ul class="dropdown-menu">
+                              <li> <a href="/">Site</a> </li>
+                           </ul>
+                       
 {% if user-id %}
 						<div class="btn-group pull-right">
                             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user"></i>{{user-id}}<span class="caret"></span></a>
@@ -57,7 +65,7 @@
         <div id="footer">
             <div class="container">
                 <a href="http://clojure.org">
-                    <img height="20" id="clojure-logo" src="http://clojure.org/space/showimage/clojure-icon.gif" width="20"> powered by Clojure </a>
+                    <img height="20" id="clojure-logo" src="http://clojure.org/space/showimage/clojure-icon.gif" width="20"> powered by Clojure! </a>
             </div>
         </div>
     </body>

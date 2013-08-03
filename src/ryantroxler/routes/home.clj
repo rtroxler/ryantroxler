@@ -14,8 +14,12 @@
   (layout/render "todo.html"
                  {:content (util/md->html "/md/todo.md")}))
 
+(defn blog-page []
+  (layout/render "blog.html"))
+
 (defroutes home-routes
   (GET "/" [] (home-page))
   (GET "/about" [] (about-page))
-  (GET "/todo" [] (todo-page)))
+  (GET "/todo" [] (todo-page))
+  (GET "/blog" [] (blog-page)))
 
