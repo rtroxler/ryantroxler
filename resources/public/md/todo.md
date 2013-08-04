@@ -6,7 +6,9 @@
 ### Website TODO:
 
 1. Fix footer, that looks awful lol.
-2. Set up proper nav bar.
-3. Remove splash home screen.
-4. Do some actual layout work.
-5. Fix this nav bar shit, damn I suck at this.
+2. Remove splash home screen.
+3. Do some actual layout work.
+4. Hide login info on nav bar.
+5. Fix login so can actually log in...
+6. Set up blog.
+
