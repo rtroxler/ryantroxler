@@ -5,10 +5,10 @@
 
 ### Website TODO:
 
-1. Fix footer, that looks awful lol.
-2. Remove splash home screen.
-3. Do some actual layout work.
-4. Hide login info on nav bar.
-5. Add clientId to dailycred.clj when their servers quit being shit so I can log in. 
-6. Set up blog.
+1. Edit home screen. 
+2. Do some actual layout work.
+3. Hide login info on nav bar.
+4. Set up blog.
+5. Add things to sidebar.
+6. Set up project pages.
 

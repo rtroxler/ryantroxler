@@ -70,16 +70,30 @@
             </div>			
 {% endblock %}
 					<div class="container-fluid">				
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class="sidebar-nav-fixed">
+                            <div class="well">
+                                <ul class="nav nav-list">
+                                    <li class="nav-header"> Sidebar</li>
+                            </div>
+                        </div>
+                    </div> <!-- span3 -->
+                    <div class="span6 span-fixed-sidebar">
+
 {% block content %}
  				
 {% endblock %}
-			</div>
+                        </div>
+                    </div>
             <div id="push"></div>
         </div>
         <div id="footer">
             <div class="container">
+                <p class="muted footer-text">
                 <a href="http://clojure.org">
-                    <img height="20" id="clojure-logo" src="http://clojure.org/space/showimage/clojure-icon.gif" width="20"> powered by Clojure! </a>
+                    Powered by Clojure. <img height="20" id="clojure-logo" src="http://clojure.org/space/showimage/clojure-icon.gif" width="20"></a>
+                </p>
             </div>
         </div>
     </body>
