@@ -3,7 +3,6 @@
             [ryantroxler.routes.auth :refer [auth-routes]]
             [ryantroxler.routes.home :refer [home-routes]]
             [noir.util.middleware :as middleware]
-            [noir.session :as session]
             [compojure.route :as route]
             [ryantroxler.models.schema :as schema]
             [taoensso.timbre :as timbre]
@@ -24,14 +23,10 @@
      :async? false ; should be always false for rotor
      :max-message-per-msecs nil
      :fn rotor/append})
-  
   (timbre/set-config!
     [:shared-appender-config :rotor]
     {:path "ryantroxler.log" :max-size (* 512 1024) :backlog 10})
-  
-  (if-not (schema/initialized?)
-    (schema/create-tables))
-  
+  (if-not (schema/initialized?) (schema/create-tables))
   (timbre/info "ryantroxler started successfully"))
 
 (defn destroy
