@@ -6,6 +6,7 @@
 (defdb db schema/db-spec)
 
 (defentity users)
+(defentity blogposts)
 
 (defn create-user [user]
   (insert users
@@ -22,3 +23,13 @@
   (first (select users
                  (where {:id id})
                  (limit 1))))
+
+(defn save-blogpost
+  [username message]
+  (insert blogposts
+          (values {:username username
+                   :message message
+                   :timestamp (new java.util.Date)})))
+
+(defn get-blogposts []
+  (select blogposts))

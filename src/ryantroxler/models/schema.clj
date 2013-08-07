@@ -30,7 +30,21 @@
       [:is_active :boolean]
       [:pass "varchar(100)"])))
 
+
+(defn create-blogposts-table
+  []
+  (sql/with-connection db-spec
+    (sql/create-table
+      :blogposts
+      [:id "INTEGER PRIMARY KEY AUTO_INCREMENT"]
+      [:timestamp :timestamp]
+      [:username "varchar(30)"]
+      [:message "varchar(200)"])
+    (sql/do-commands
+      "CREATE INDEX timestamp_index ON blogposts (timestamp)")))
+
 (defn create-tables
   "creates the database tables used by the application"
   []
-  (create-users-table))
+  (create-users-table)
+  (create-blogposts-table))

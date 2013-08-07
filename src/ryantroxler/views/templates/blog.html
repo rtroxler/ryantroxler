@@ -8,11 +8,38 @@
         <h1>
             Future Blog
         </h1>
+
+{% if user-id %}
+    <form action="/blog" method="POST">
         <p>
-            There might be some shit here some time.
+            Name:
+            <input type="text" name="username" value={{username}} placeholder={{user-id}}>
         </p>
+        <p>
+            Message:
+            <textarea rows="4" cols="50" name="message">
+                {{message}}
+            </textarea>
+        </p>
+        <input type="submit" value="comment">
+    </form>
+
+{% endif %}
+        
     </div>
 
+    {% if error %}
+    <p> {{error}}</p>
+    {% endif %}
 
+    <ul>
+        {% for item in messages %}
+            <li>
+                <time>{{item.timestamp|date:"MM-dd-yyy"}}</time>
+                <p>{{item.message}}</p>
+                <p> - {{item.username}}</p>
+            </li>
+        {% endfor %}
+    </ul>
 
 {% endblock %}
