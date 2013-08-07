@@ -12,8 +12,8 @@
 {% if user-id %}
     <form action="/blog" method="POST">
         <p>
-            Name:
-            <input type="text" name="username" value={{username}} placeholder={{user-id}}>
+            Title:
+            <input type="text" name="blogtitle" value={{blogtitle}}>
         </p>
         <p>
             Message:
@@ -29,15 +29,16 @@
     </div>
 
     {% if error %}
-    <p> {{error}}</p>
+    <p class="error"> {{error}}</p>
     {% endif %}
 
     <ul>
         {% for item in messages %}
             <li>
+                <h2>{{item.blogtitle}}</h2>
                 <time>{{item.timestamp|date:"MM-dd-yyy"}}</time>
                 <p>{{item.message}}</p>
-                <p> - {{item.username}}</p>
+                <p> - {{user-id}}</p>
             </li>
         {% endfor %}
     </ul>

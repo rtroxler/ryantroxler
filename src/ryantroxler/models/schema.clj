@@ -38,7 +38,7 @@
       :blogposts
       [:id "INTEGER PRIMARY KEY AUTO_INCREMENT"]
       [:timestamp :timestamp]
-      [:username "varchar(30)"]
+      [:blogtitle "varchar(30)"]
       [:message "varchar(200)"])
     (sql/do-commands
       "CREATE INDEX timestamp_index ON blogposts (timestamp)")))

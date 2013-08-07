@@ -15,25 +15,25 @@
   (layout/render "todo.html"
                  {:content (util/md->html "/md/todo.md")}))
 
-(defn blog-page [& [username message error]]
+(defn blog-page [& [blogtitle message error]]
   (layout/render "blog.html"
                  {:error error
-                  :username username
+                  :blogtitle blogtitle
                   :message message
                   :messages (db/get-blogposts)}))
 
-(defn save-blogpost [username message]
+(defn save-blogpost [blogtitle message]
   (cond
 
-    (empty? username)
-    (blog-page username message "Forgot name.")
+    (empty? blogtitle)
+    (blog-page blogtitle message "No Title")
 
     (empty? message)
-    (blog-page username message "Got something to say, punk?")
+    (blog-page blogtitle message "Got something to say, punk?")
 
     :else
     (do
-      (db/save-blogpost username message)
+      (db/save-blogpost blogtitle message)
       (blog-page))))
 
 (defroutes home-routes
@@ -41,5 +41,5 @@
   (GET "/about" [] (about-page))
   (GET "/todo" [] (todo-page))
   (GET "/blog" [] (blog-page))
-  (POST "/blog" [username message] (save-blogpost username message)))
+  (POST "/blog" [blogtitle message] (save-blogpost blogtitle message)))
 

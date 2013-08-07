@@ -25,9 +25,9 @@
                  (limit 1))))
 
 (defn save-blogpost
-  [username message]
+  [blogtitle message]
   (insert blogposts
-          (values {:username username
+          (values {:blogtitle blogtitle
                    :message message
                    :timestamp (new java.util.Date)})))
 
