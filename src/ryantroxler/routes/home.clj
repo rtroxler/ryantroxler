@@ -22,6 +22,10 @@
                   :message message
                   :messages (db/get-blogposts)}))
 
+(defn josephus-page []
+  (layout/render "josephus.html"
+                 {:content (util/md->html "/md/josephus.md")}))
+
 (defn save-blogpost [blogtitle message]
   (cond
 
@@ -41,5 +45,6 @@
   (GET "/about" [] (about-page))
   (GET "/todo" [] (todo-page))
   (GET "/blog" [] (blog-page))
-  (POST "/blog" [blogtitle message] (save-blogpost blogtitle message)))
+  (POST "/blog" [blogtitle message] (save-blogpost blogtitle message))
+  (GET "/projects/josephus" [] (josephus-page)))
 
