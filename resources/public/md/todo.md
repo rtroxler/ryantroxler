@@ -12,4 +12,5 @@
 5. Add things to sidebar.
 6. Set up project pages.
 7. Set up md->html for blog posts (create my own?)
-
+8. Add a clojure Sequence Library page.
+9. Set up a random sequence per day for the side bar.
