@@ -26,6 +26,10 @@
   (layout/render "josephus.html"
                  {:content (util/md->html "/md/josephus.md")}))
 
+(defn clintake-page []
+  (layout/render "josephus.html"
+                 {:content (util/md->html "/md/clintake.md")}))
+
 (defn save-blogpost [blogtitle message]
   (cond
 
@@ -46,5 +50,6 @@
   (GET "/todo" [] (todo-page))
   (GET "/blog" [] (blog-page))
   (POST "/blog" [blogtitle message] (save-blogpost blogtitle message))
-  (GET "/projects/josephus" [] (josephus-page)))
+  (GET "/projects/josephus" [] (josephus-page))
+  (GET "/projects/clintake" [] (clintake-page)))
 

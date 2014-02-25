@@ -1,15 +1,15 @@
-### Rosetta Stone Clojure TODO:
-
-1. [Josephus problem](http://rosettacode.org/wiki/Josephus_problem)
-
-
-### Website TODO:
+### TODO:
 
 1. Edit home screen. 
-2. Do some actual layout work.
-3. Hide login info on nav bar.
-4. Set up blog layout. 
-5. Add things to sidebar.
-6. Set up project pages.
-7. Set up md->html for blog posts (create my own?)
+2. Add things to sidebar.
+3. Add things to About. (resume?)
+3. Do some actual layout work.
+4. Set up project pages.
+5. Set up blog?
+
+### Reading:
+
+1. [Scala for the Impatient](http://horstmann.com/scala/)
+
+
 
