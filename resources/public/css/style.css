@@ -1,0 +1,69 @@
+.side-terminal {
+    color: #FFFFFF;
+    line-height:15px;
+}
+
+#term {
+    position:absolute;
+    top: 80;
+    left:100;
+    height: 600px;
+    width: 500px;
+}
+
+
+.floating {
+    background-color: #181512;
+    box-shadow: 5px 5px 10px #181512;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.well {
+    background-color: #181512;
+    box-shadow: 5px 5px 10px #181512;
+    border: none;
+    border-radius:0;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.hero-unit {
+    background-color: #000000;
+}
+
+.navbar {
+    background-color: #333333;
+    background-image: none;
+}
+
+.navbar-inner {
+    background-color: #333333;
+    background-image: none;
+}
+
+.navbar .brand {
+    color:#FFFFFF;
+}
+
+.navbar .nav > li > a {
+    color: #FFFFFF;
+}
+
+.navbar .nav {
+    display:inline-block;
+    float:none;
+}
+
+.center .navbar-inner {
+    text-align:center;
+}
+
+.center .navbar .nav,
+.center .navbar .nav > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    *zoom:1; /* hasLayout ie7 trigger */
+    .vertical-align:top;
+}
