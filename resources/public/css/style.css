@@ -14,11 +14,17 @@ body {
 #term {
     position:absolute;
     top: 100px;
-    left:400px;
+    left:33;
     height: 550px;
     width: 500px;
 }
 
+.sidebar {
+    position:absolute;
+    right: 20px;
+    top: 65px;
+    width:220px;
+}
 
 .floating {
     background-color: #181512;
@@ -28,6 +34,13 @@ body {
 }
 
 .well {
+    background-color: #F5F5F5;
+    height:145px;
+    margin-bottom:20px;
+    padding:10px;
+}
+
+.well-term {
     background-color: #181512;
     box-shadow: 5px 5px 10px #181512;
     border: none;

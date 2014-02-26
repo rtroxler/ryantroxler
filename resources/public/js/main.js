@@ -27,15 +27,15 @@ jQuery(function($, undefined) {
             term.echo("\
                 <br\>\
                 total 48<br \>\
-                 4 drwxr-xr-x  7 windelicato users  4096 Jul 12 19:30 .<br \>\
-                 4 drwx------  6 windelicato users  4096 Jul 10 08:28 ..<br \>\
-                 4 -rw-r--r--  1 windelicato users  &#160 16 Jul  10 08:58 CNAME<br \>\
-                 4 drwxr-xr-x  2 windelicato users  4096 Jul 12 09:35 css<br \>\
-                 4 drwxr-xr-x  2 windelicato users  4096 Jul 10 10:18 fonts<br \>\
-                 4 drwxr-xr-x  8 windelicato users  4096 Jul 11 20:40 .git<br \>\
-                 4 drwxr-xr-x  2 windelicato users  4096 Jul 11 20:02 img<br \>\
-                 4 -rw-r--r--  1 windelicato users  2367 Jul 12 19:30 index.html<br \>\
-                 4 drwxr-xr-x  2 windelicato users  4096 Jul 12 19:43 js<br \>\
+                 4 drwxr-xr-x  7 rtroxler users  4096 Jul 12 19:30 .<br \>\
+                 4 drwx------  6 rtroxler users  4096 Jul 10 08:28 ..<br \>\
+                 4 -rw-r--r--  1 rtroxler users  &#160 16 Jul  10 08:58 bin<br \>\
+                 4 drwxr-xr-x  2 rtroxler users  4096 Jul 12 09:35 css<br \>\
+                 4 drwxr-xr-x  2 rtroxler users  4096 Jul 10 10:18 fonts<br \>\
+                 4 drwxr-xr-x  8 rtroxler users  4096 Jul 11 20:40 .git<br \>\
+                 4 drwxr-xr-x  2 rtroxler users  4096 Jul 11 20:02 img<br \>\
+                 4 -rw-r--r--  1 rtroxler users  2367 Jul 12 19:30 index.html<br \>\
+                 4 drwxr-xr-x  2 rtroxler users  4096 Jul 12 19:43 js<br \>\
                 <br\>\
             ", {raw: true});
         } else {
@@ -72,7 +72,7 @@ jQuery(function($, undefined) {
 
     function greetings(term) {
         term.clear();
-        term.echo("Welcome! <br/> <br/ >Type help for a list of commands ...", {raw:true});
+        term.echo("Welcome! <br/> Type help for a list of commands ...<br/>", {raw:true});
     }
 
 });

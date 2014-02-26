@@ -56,11 +56,9 @@
                 <div class="row-fluid">
                     <div class="span3">
                         <div class="sidebar-nav-fixed">
-                            <div class="well">
-                                <ul class="nav nav-list">
-                                    <img align="left" src="{{context}}/img/image.jpg">
-                                    <p class="side-terminal"> $> cat about.txt </p>
-                                    <p class="side-terminal">Oh hai there. </p>
+                            <div class="well-term floating">
+                                <p class="side-terminal"> $> cat about.txt </p>
+                                <p class="side-terminal">Oh hai there. </p>
                             </div>
                         </div>
                     </div> <!-- span3 -->
@@ -69,8 +67,15 @@
 {% block content %}
  				
 {% endblock %}
+                    </div>
+                    <div class="span3">
+                        <div class="sidebar">
+                            <div class="well floating">
+                                <img align="left" src="{{context}}/img/image.jpg">
+                            </div>
                         </div>
                     </div>
+                </div>
             <div id="push"></div>
         </div>
     </body>
