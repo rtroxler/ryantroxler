@@ -14,10 +14,11 @@ body {
 #term {
     position:absolute;
     top: 100px;
-    left:33;
+    left:33%;
     height: 550px;
     width: 500px;
 }
+
 
 .sidebar {
     position:absolute;
@@ -47,6 +48,7 @@ body {
     border-radius:0;
     padding: 10px;
     font-size: 12px;
+    min-width:330px;
 }
 
 .hero-unit {

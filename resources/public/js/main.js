@@ -6,7 +6,7 @@ jQuery(function($, undefined) {
             term.echo("\
                 <br\>\
                 I'm a <span style='color: #204A87'>software engineer</span> based out of Manhattan, Kansas.\n\
-                To see my portfolio, type <span style='color: #d6c3b6'>links</span>\
+                To see my portfolio, type <span style='color: #d6c3b6'>links.</span>\
                 <br><br>\
                 ", {raw: true});
         } else if(command == 'contact') {
@@ -53,6 +53,11 @@ jQuery(function($, undefined) {
             greetings(term);
         }
         });
+
+    function coolPrompt() {
+        return "[rtroxler] ~ » ",{raw:true}
+
+    }
 
     function updateClock(){
         var currentTime = new Date();
