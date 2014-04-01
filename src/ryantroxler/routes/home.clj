@@ -23,11 +23,11 @@
                   :messages (db/get-blogposts)}))
 
 (defn josephus-page []
-  (layout/render "josephus.html"
+  (layout/render "projects.html"
                  {:content (util/md->html "/md/josephus.md")}))
 
 (defn clintake-page []
-  (layout/render "josephus.html"
+  (layout/render "projects.html"
                  {:content (util/md->html "/md/clintake.md")}))
 
 (defn save-blogpost [blogtitle message]

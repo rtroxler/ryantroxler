@@ -4,25 +4,41 @@ jQuery(function($, undefined) {
             term.echo("usage: whois [username]");
         } else if(command == 'about') {
             term.echo("\
-                <br\>\
                 I'm a <span style='color: #204A87'>software engineer</span> based out of Manhattan, Kansas.\n\
                 To see my portfolio, type <span style='color: #d6c3b6'>links.</span>\
-                <br><br>\
+                <br>\
                 ", {raw: true});
         } else if(command == 'contact') {
             term.echo("\
                 You can email me at<br \>\
-                <span style='color: #d6c3b6'>troxler.ryan</span>@\
-                <span style='color: #d6c3b6'>gmail.com</span>\
+                <span style='color: #d6c3b6'>troxler.ryan</span>@<span style='color: #d6c3b6'>gmail.com</span>\
                 <br>\
                 ", {raw: true});
         } else if(command == 'links') {
             term.echo("\
                 <br\>\
                 ", {raw: true});
+        } else if(command == 'archey') {
+            term.echo("\
+                <img src='img/arch.png' width=500px> \
+                <br>\
+                ", {raw: true});
+        } else if(command == 'cat about.txt') {
+            term.echo("\
+                Senior in Computer Science/Software Engineering at Kansas State University. \
+                <br><br>\
+                Lead Student Application Developer for K-State Office of Mediated Education. \
+                <br><br>\
+                Linux Enthusiast. \
+                <br>\
+                ", {raw: true});
         } else if(command == 'help') {
             term.echo("\nabout   contact    links   clear  ls\n");
         } else if(command == 'ls') {
+            term.echo("\
+                    about.txt   &nbsp; <span style='color: #3465A4'>bin</span>   &nbsp; <span style='color: #3465A4'>img</span>  &nbsp;  <span style='color: #3465A4'>docs</span> \
+                    <br>\
+                    ", {raw: true});
         } else if(command == 'ls -lsa') {
             term.echo("\
                 <br\>\
@@ -39,7 +55,7 @@ jQuery(function($, undefined) {
                 <br\>\
             ", {raw: true});
         } else {
-            term.echo( "<br\>" + command + " not found. Type <span style='color:#D6C3B6'>help</span> for command list <br\>"
+            term.echo(command + " not found. Type <span style='color:#D6C3B6'>help</span> for command list <br\>"
             ,{raw: true});
         }
             
@@ -54,24 +70,6 @@ jQuery(function($, undefined) {
         }
         });
 
-    function coolPrompt() {
-        return "[rtroxler] ~ » ",{raw:true}
-
-    }
-
-    function updateClock(){
-        var currentTime = new Date();
-        var currentHours = currentTime.getHours ( );
-        var currentMinutes = currentTime.getMinutes ( );
-        var currentSeconds = currentTime.getSeconds ( );
-        currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
-        currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
-        var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
-        currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
-        currentHours = ( currentHours == 0 ) ? 12 : currentHours;
-        var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
-        document.getElementById("clock").firstChild.nodeValue = currentTimeString;
-    } setInterval(updateClock, 100);
 
     $('.floating').draggable().resizable();
 
