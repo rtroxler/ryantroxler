@@ -29,6 +29,21 @@ jQuery(function($, undefined) {
         } else if(command == 'links') {
             term.echo("\
                 <br\>\
+                <table border='0'>\
+                <tr>\
+                    <td><a href='http://www.github.com/rtroxler'>github</a></td>\
+                    <td><span style='color: #9f7155'>««</span> code </td>\
+                </tr>\
+                <tr>\
+                    <td><a href='https://www.linkedin.com/pub/ryan-troxler/87/966/436'>linkedin</a></td>\
+                    <td><span style='color: #9f7155'>««</span> professional profile</td>\
+                </tr>\
+                <tr>\
+                    <td><a href='https://docs.google.com/document/d/1O1ujw2jYz2FtN0lpC-NvgsAoK0WWPb9ZYAByK5JXELQ/export?format=pdf'>resume</a></td>\
+                    <td><span style='color: #9f7155'>««</span> download my resume </td>\
+                </tr>\
+                </table>\
+                <br\>\
                 ", {raw: true});
         } else if(command == 'archey') {
             term.echo("\
