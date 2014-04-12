@@ -8,5 +8,3 @@
 
 1. [Scala for the Impatient](http://horstmann.com/scala/)
 
-
-

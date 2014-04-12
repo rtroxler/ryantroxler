@@ -15,6 +15,10 @@
   (layout/render "todo.html"
                  {:content (util/md->html "/md/todo.md")}))
 
+(defn lifting-page [] 
+  (layout/render "lifting.html"
+                 {:content (util/md->html "/md/lifting.md")}))
+
 (defn blog-page [& [blogtitle message error]]
   (layout/render "blog.html"
                  {:error error
@@ -45,11 +49,12 @@
       (blog-page))))
 
 (defroutes home-routes
-  (GET "/" [] (home-page))
-  (GET "/about" [] (about-page))
-  (GET "/todo" [] (todo-page))
-  (GET "/blog" [] (blog-page))
-  (POST "/blog" [blogtitle message] (save-blogpost blogtitle message))
+  (GET "/"                  [] (home-page))
+  (GET "/about"             [] (about-page))
+  (GET "/todo"              [] (todo-page))
+  (GET "/weightlifting"     [] (lifting-page))
+  (GET "/blog"              [] (blog-page))
+  (POST "/blog"             [blogtitle message] (save-blogpost blogtitle message))
   (GET "/projects/josephus" [] (josephus-page))
   (GET "/projects/clintake" [] (clintake-page)))
 
