@@ -1,10 +1,9 @@
 ### TODO:
 
-1. Add things to About. (resume?) (about.txt).
-2. Set up project pages.
-3. Set up blog?
+1. Set up blog?
 
 ### Reading:
 
 1. [Scala for the Impatient](http://horstmann.com/scala/)
+2. [Programming in Scala](http://www.artima.com/pins1ed/a-scalable-language.html)
 
